@@ -1,0 +1,111 @@
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+p{
+    color:rgb(67, 103, 118) ;
+}
+body{
+    background-color:hsl(210, 36%, 96%);
+    header{
+        text-align: center;
+        margin: 70px;
+
+        h1{
+            letter-spacing: 3;
+            margin-bottom: 10px;
+        }
+       
+
+    }
+    main{
+        display: flex;
+        width:90% ;
+        margin: 0 40px 40px 40px;
+
+        .firstArticle{
+            width: 50%;
+            img{
+                width:100%;
+                height: 320px;
+                border-radius: 10px;
+            }
+        }
+        .secondArticle{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin:0px 30px 0px;
+            background-color:#fff;
+            border-radius: 10px;
+
+            .buttonContainer{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+                button{
+                    width: 33.33%;
+                    height: 50;
+                    font-size: 1em;
+                    letter-spacing: 2;
+                    border: none;
+                    background-color:hsl(210, 31%, 80%);
+                    transition: 0.3s;
+                    cursor: pointer;
+
+                    &:first-child{
+                        border-radius:10px 0px 0px 0px;
+                    }
+                    &:last-child{
+                        border-radius:0px 10px 0px 0px;
+                    }
+                    &:focus{
+                        background-color: transparent;
+
+                        &:hover{
+                            color: black;
+                            background-color: transparent;
+                        }
+                    }
+                    &:hover{
+                        color:rgb(138, 138, 201);
+                        background-color:rgb(222, 243, 247) ; 
+                    }
+                }
+                    .active{
+                        background-color: transparent;
+                        &:hover{
+                            background-color: transparent;
+                            color: black;
+                        }
+                    }
+            }
+            .display{
+                padding: 20px;
+
+                h3{
+                    letter-spacing: 4;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+    }
+
+    @media (max-width:800px) {
+        main{
+            flex-direction: column;
+            align-items: center;
+            
+            .firstArticle{
+                margin-bottom: 20px;
+                width: 90%;
+            }
+            .secondArticle{
+                width: 90%;
+            }
+        }
+    }
+}
